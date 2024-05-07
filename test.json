@@ -1,0 +1,79 @@
+{
+  "info": {
+    "_postman_id": "d4e6b42d-2385-4a3b-99b8-6c71fb2c6f58",
+    "name": "Time API Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET Current Time",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/America/New_York",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "America",
+            "New_York"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Convert Time",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"date\":\"12.20.2021 22:21:05\", \"tz\": \"EST\", \"target_tz\": \"GMT\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/convert",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "convert"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Date Difference",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"first_date\":\"12.06.2024 22:21:05\", \"first_tz\": \"EST\", \"second_date\":\"12:30pm 2024-02-01\", \"second_tz\": \"Europe/Moscow\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/v1/datediff",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "v1",
+            "datediff"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
